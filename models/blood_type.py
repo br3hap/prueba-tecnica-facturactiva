@@ -12,4 +12,4 @@ class BloodType(models.Model):
     _description = 'BloodType'
 
     name = fields.Char('Tipo')
-    active = fields.Boolean('Activo', default=False)
+    active = fields.Boolean('Activo', default=True)

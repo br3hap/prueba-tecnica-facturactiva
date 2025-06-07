@@ -9,7 +9,7 @@ class InvoiceDateModal extends Component {
     setup() {
         this.rpc = useService("rpc");
         this.notification = useService("notification");
-        console.log("🧩 Componente cargado con props:", this.props);
+        console.log(" Componente cargado con props:", this.props);
     }
 
     async updateInvoiceDate() {
@@ -38,9 +38,8 @@ class InvoiceDateModal extends Component {
 
 InvoiceDateModal.template = "prueba_facturactiva.InvoiceDateModalTemplate";
 
-// 💡 NO uses loadTemplates, solo instancias Dialog directamente
 registry.category("actions").add("prueba_facturactiva.modal", (env, action) => {
-    console.log("📣 Modal lanzado correctamente");
+    console.log("Modal lanzado correctamente  ->>>>");
 
     const recordId = action.context.active_id;
 
