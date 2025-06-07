@@ -12,7 +12,7 @@ class Type_remaining_sand(models.TransientModel):
     _name = 'type.remaining.sand'
     _description = _('Type_remaining_sand')
 
-    name = fields.Char(_('Name'))
+    # name = fields.Char(_('Name'))
     blood_type = fields.Many2one('blood.type', string='Tipo de Sangre por defecto')
     blood_type_positive = fields.Many2one('blood.type', string='Tipo de Sangre [+]')
     blood_type_negative = fields.Many2one('blood.type', string='Tipo de Sangre [-]')
