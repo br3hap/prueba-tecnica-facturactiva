@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View type_remaining_sand form -->
+    <record id="view_type_remaining_sand_form" model="ir.ui.view">
+        <field name="name">view.type_remaining_sand.form</field>
+        <field name="model">type.remaining.sand</field>
+        <field name="arch" type="xml">
+            <form string="Type_remaining_sand">
+                <div class="oe_title">
+                    <label for="name"/>
+                    <h1>
+                        <field name="name" placeholder="Name..."/>
+                    </h1>
+                </div>
+                <group name="group" string="group">
+                    <group>
+                        <field name="blood_type" domain="[('id', '!=', context.get('exclude_blood_type'))]"/>
+                    </group>
+                    <group>
+                        <field name="blood_type_positive" domain="[('id', '!=', context.get('exclude_blood_type')), ('name', 'ilike', '+')]"/>
+                    </group>
+                    <group>                       
+                        <field name="blood_type_negative" domain="[('id', '!=', context.get('exclude_blood_type')), ('name', 'ilike', '-')]"/>
+                    </group>
+                </group>
+                <footer>
+                    <button string="Actualizar comentario" type="object" name="update_commit" class="btn-primary"/>
+                    <button string="Anular Operación" class="btn-secondary" special="cancel"/>
+
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

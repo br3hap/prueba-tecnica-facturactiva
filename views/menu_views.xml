@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="prueba_facturactiva_menu_root"
+              name="Datos"
+              web_icon="prueba_facturactiva,static/description/icon.png"
+              sequence="10"
+    />
+
+</odoo>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View blood.type View Tree -->
+    <record id="view_blood_type_tree" model="ir.ui.view">
+        <field name="name">view.blood.type.tree</field>
+        <field name="model">blood.type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="active" widget="boolean_toggle"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View blood.type form -->
+    <record id="view_blood_type_form" model="ir.ui.view">
+        <field name="name">view.blood.type.form</field>
+        <field name="model">blood.type</field>
+        <field name="arch" type="xml">
+            <form string="Blood Type">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="active" widget="boolean_toggle"/>                      
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View blood.type search -->
+    <record id="view_blood_type_search" model="ir.ui.view">
+        <field name="name">view.blood.type.search</field>
+        <field name="model">blood.type</field>
+        <field name="arch" type="xml">
+            <search>
+                <group expand="1" string="Group By">
+                    <filter string="Name" name="name" domain="[]" context="{'group_by':'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action blood.type -->
+    <record id="action_blood_type" model="ir.actions.act_window">
+        <field name="name">Blood Type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">blood.type</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new Blood Type.
+            </p>
+        </field>
+    </record>
+
+     <!-- menuitem -->
+    <menuitem id="prueba_facturactiva_list_menu"
+        name="Datos de los pacientes"
+        action="action_blood_type"
+        sequence="20"
+        parent="prueba_facturactiva_menu_root"/>
+
+</odoo>

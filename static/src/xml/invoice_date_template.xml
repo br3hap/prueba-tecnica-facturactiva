@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="prueba_facturactiva.InvoiceDateModalTemplate">
+        <div>
+            <h1>Actualizar Fecha de Factura</h1>
+            <div class="mt-3">
+                <input type="date" id="invoice_date_input" class="form-control"/>
+            </div>
+            <div class="mt-3 text-end">
+                <button class="btn btn-secondary me-2" t-on-click="cancel">Cancelar</button>
+                <button class="btn btn-primary" t-on-click="updateInvoiceDate">Actualizar</button>
+            </div>
+        </div>
+    </t>
+</templates>
