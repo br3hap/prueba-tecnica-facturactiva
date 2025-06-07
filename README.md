@@ -8,4 +8,9 @@ Vista al presionar Comentario
 
 Vista del menu de Sangres
 ![alt text](static/src/img/3.png)
+
+
+
+datos para cargar en las sangres
+[text](.)
  
